@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #0085FF;
+    background-color: #0A0D2C;
 }
 
 .navbar{
@@ -58,4 +59,9 @@ p{
 
 a{
     text-decoration: none;
+    color: #0085FF;
+}
+
+a:hover{
+    color: #fff;
 }

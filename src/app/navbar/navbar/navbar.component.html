@@ -6,8 +6,8 @@
     <ul>
       <li><a routerLink="/landing-page">Home</a></li>
       <li><a routerLink="/other-info">Other</a></li>
-      <li><a>About</a></li>
-      <li><a>Projects</a></li>
+      <li><a [routerLink]="['/landing-page']" fragment="about">About</a></li>
+      <li><a [routerLink]="['/landing-page']" fragment="projects">Projects</a></li>
     </ul>
   </div>
 </div>
