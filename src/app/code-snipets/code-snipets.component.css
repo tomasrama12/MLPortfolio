@@ -1,3 +1,6 @@
+@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+@import "~prismjs/themes/prism-okaidia";
+
 .code-snipet-container{
     width: 100%;
     display: flex;
@@ -20,3 +23,4 @@ pre{
 
     overflow-wrap: break-word;
 }
+
