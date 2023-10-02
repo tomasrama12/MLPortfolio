@@ -14,6 +14,8 @@ import { InfoPageComponent } from './info-page/info-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TextSectionComponent } from './text-section/text-section.component';
 import { CodeSnipetsComponent } from './code-snipets/code-snipets.component';
+import { PvOneComponent } from './projects-views/pv-one/pv-one.component';
+import { SubtitleTextSectionComponent } from './subtitle-text-section/subtitle-text-section.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { CodeSnipetsComponent } from './code-snipets/code-snipets.component';
     InfoPageComponent,
     LandingPageComponent,
     TextSectionComponent,
-    CodeSnipetsComponent
+    CodeSnipetsComponent,
+    PvOneComponent,
+    SubtitleTextSectionComponent
   ],
   imports: [
     BrowserModule,

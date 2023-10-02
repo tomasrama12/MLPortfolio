@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-code-snipets',
   templateUrl: './code-snipets.component.html',
@@ -8,4 +9,8 @@ import { Component, Input } from '@angular/core';
 export class CodeSnipetsComponent {
 
   @Input() code!: string;
+  ngOnInit(){
+    console.log(this.code)
+
+  }
 }

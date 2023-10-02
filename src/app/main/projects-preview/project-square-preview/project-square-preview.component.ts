@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-square-preview',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./project-square-preview.component.css']
 })
 export class ProjectSquarePreviewComponent {
-
+@Input() title!: string;
+@Input() description!: string;
 }
