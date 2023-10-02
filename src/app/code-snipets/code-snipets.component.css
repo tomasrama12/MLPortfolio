@@ -15,7 +15,7 @@
 code{
     width: 100%;
     overflow-wrap: break-word;
-    white-space: pre-line;
+    white-space: pre-line !important;
     background-color: #0A0D2C;
 }
 pre{

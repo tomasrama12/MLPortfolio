@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-
+import * as hljs from 'highlight.js';
 
 
 @Component({
@@ -12,6 +12,10 @@ export class CodeSnipetsComponent {
   @Input() code!: string;
   ngOnInit(){
     console.log(this.code)
+
+  }
+  ngAfterViewInit(){
+    hljs.default.highlightAll();
   }
   
 }
