@@ -16,6 +16,7 @@ import { TextSectionComponent } from './text-section/text-section.component';
 import { CodeSnipetsComponent } from './code-snipets/code-snipets.component';
 import { PvOneComponent } from './projects-views/pv-one/pv-one.component';
 import { SubtitleTextSectionComponent } from './subtitle-text-section/subtitle-text-section.component';
+import { ImageContentComponent } from './image-content/image-content.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { SubtitleTextSectionComponent } from './subtitle-text-section/subtitle-t
     TextSectionComponent,
     CodeSnipetsComponent,
     PvOneComponent,
-    SubtitleTextSectionComponent
+    SubtitleTextSectionComponent,
+    ImageContentComponent
   ],
   imports: [
     BrowserModule,

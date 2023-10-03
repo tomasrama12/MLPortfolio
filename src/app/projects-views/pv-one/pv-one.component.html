@@ -1,61 +1,78 @@
 <div class="project-container">
   <app-text-section
-    title="Project 1"
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+    title="Sports prediction LDA"
+    text="Predicting athletic performance is an exciting 
+    challenge that combines data science and sports analytics 
+    to identify talented athletes in a specific sport. In this 
+    project, we will use a dataset containing detailed information 
+    about individuals participating in various sports, including rugby, 
+    fútbol, volleyball, and basketball. Our main task is to predict the most suitable 
+    primary sport for each individual based on a set of physical and mental attributes."
   ></app-text-section>
   <app-text-section
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+    text="The dataset comprises various columns capturing key characteristics of athletes, 
+    such as age(edad), strength(fuerza), speed(velocidad), injury history(historial de lesiones), vision(visión), endurance(resistencia), 
+    agility(agilidad), and decision-making ability(capaciad de toma de decisiones). 
+    The target variable of our analysis is PrimarySport (DeportePrimario), indicating the sport an individual is inclined to excel in."
   ></app-text-section>
   <app-text-section
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+    text="We will leverage powerful tools like Python and RapidMiner to carry out this analysis. 
+    Python will enable us to perform data preprocessing, build machine learning models, and evaluate 
+    their performance, while RapidMiner will assist us in conducting more in-depth and efficient exploratory data analysis."
   ></app-text-section>
   <app-text-section
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+    text="Throughout this project, we will explore machine learning and data mining techniques 
+    to develop an accurate model that allows us to determine the most suitable primary sport for
+     each individual based on their personal characteristics. This type of analysis not only has 
+     applications in the sports domain but also in talent identification and decision-making in 
+     various fields where individual skills are critical to success."
+  ></app-text-section>
+  <app-text-section title="Code" text="The code used in this project is shown below"></app-text-section>
+  <app-code-snipets code="{{ code }}"></app-code-snipets>
+  <app-text-section
+    title="Some RM"
+    text="This shows how the model works in RM"
+  ></app-text-section>
+  <app-image-content
+    imageRoute="../../assets/pdtest/pdtest1.png"
+  ></app-image-content>
+  <app-text-section
+    text="The columns are similar to when using RM to evaluate a model, 
+  which shows values seen here such as accuracy, 
+  recall, among others."
+  ></app-text-section>
+  <app-image-content
+    imageRoute="../../assets/pdtest/pdtest2.png"
+  ></app-image-content>
+  <app-image-content
+    imageRoute="../../assets/pdtest/pdtest3.png"
+  ></app-image-content>
+
+  <app-text-section
+    text="This shows the confusion matrix, which is a table that is often used to describe the performance of a classification model."
+  ></app-text-section>
+  <app-image-content
+    imageRoute="../../assets/pdtest/pdtest4.png"
+  ></app-image-content>
+
+  <app-text-section
+    text="To compare results and evalueate the model from another perspective, I chose to use RapidMiner Studio."
   ></app-text-section>
   <app-text-section
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+    text="The first step is to retrive the dataset. As you may see in the image below, after retrieving
+  I decided to filter the examples to work with a cleaner dataset. After filtering, a cross validation is performed"
   ></app-text-section>
-  <app-subtitle-text-section
-    title="Subtitle 1"
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
-  ></app-subtitle-text-section>
+  <app-image-content
+    imageRoute="../../assets/pdtest/pdtest5.png"
+  ></app-image-content>
   <app-text-section
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+    text="The content of the cross validation has a known supervised algorithm, Linear Discriminant Analysis.
+  After training data with that algorithm, the model was applied to check the results and its performance"
   ></app-text-section>
-  <app-text-section
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
-  ></app-text-section>
-  <app-text-section
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
-  ></app-text-section>
-  <app-text-section
-    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
-  ></app-text-section>
-  <app-code-snipets
-    code="{{code}}"
-  ></app-code-snipets>
+  <app-image-content
+    imageRoute="../../assets/pdtest/pdtest6.png"
+  ></app-image-content>
+  <app-image-content
+    imageRoute="../../assets/pdtest/pdtest7.png"
+  ></app-image-content>
 </div>
