@@ -45,9 +45,10 @@ img{
 p{
     color: white;
     margin: 0;
+    font-weight: bold;
 }
 p.desc{
-    color: white;
+    color: #0085FF;
     margin: 0;
     width: 100%;
     text-overflow: ellipsis;
@@ -68,7 +69,6 @@ desc{
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    white-space: nowrap;
     overflow: hidden; /* Oculta el texto que se desborda */
     text-overflow: ellipsis; /* Agrega puntos suspensivos al final del texto desbordado */
 
