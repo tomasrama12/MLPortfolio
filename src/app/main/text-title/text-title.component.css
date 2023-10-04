@@ -2,4 +2,5 @@ p{
     color: #0085FF;
     font-weight: bold;
     margin: 0;
+    overflow-wrap: anywhere;
 }

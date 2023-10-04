@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .title{
@@ -30,4 +31,10 @@ p{
 
 .down-icon{
     
+}
+
+@media screen and (max-width: 600px) {
+    p{
+        flex-direction: column;
+    }
 }
