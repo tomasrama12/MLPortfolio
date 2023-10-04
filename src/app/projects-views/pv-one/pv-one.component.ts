@@ -7,38 +7,50 @@ import { Component } from '@angular/core';
 })
 export class PvOneComponent {
  code: string = `
- import matplotlib
+import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_predict, cross_val_score
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import StratifiedKFold
 
-input_file = "bank.csv"
-df = pd.read_csv(input_file, header=0, sep=";")
-#delete default column
-del df['default']
 
-print(df.values)
-cat_cols = df.select_dtypes(include=['object']).columns
+input_file = "sports_Training.csv"
+df = pd.read_csv(input_file, header=0)
+data = df[(df['CapacidadDecision'] >= 3) & (df['CapacidadDecision'] <= 100)]
 
-#Este paso es importante ya que esta libreria usando el cross validation no acepta valores categoricos, por ende los transformo a numericos.
-label_encoder = LabelEncoder()
-for col in cat_cols:
-    df[col] = label_encoder.fit_transform(df[col])
+print(data.values)
 
-X = df.loc[:, df.columns != 'y']
-y = df['y'].values
-lr = LogisticRegression()
+labelEncoder = LabelEncoder()
 
-#Importante a destacar el shuffle true ya que asi se mezclan los datos y no ocurren sesgos de ningun tipo
+X = data.loc[:, data.columns != 'DeportePrimario']
+y = data['DeportePrimario'].values
+
+y_encoded = labelEncoder.fit_transform(y)
+
+lda = LinearDiscriminantAnalysis()
+
 cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=0)
-pred = cross_val_predict(lr, X, y, cv=cv)
+pred = cross_val_predict(lda, X, y_encoded, cv=cv)
 
-print("Tabla para comparar con RM")
-print(classification_report(y, pred, digits=3))
+print("Predicted")
+print(pred)
+
+print("Cross validation score")
+print(classification_report(y_encoded, pred, digits=3))
+
+input_file = "sports_Scoring.csv"
+df2 = pd.read_csv(input_file, header=0)
+data2 = df2[(df2['CapacidadDecision'] >= 3) & (df2['CapacidadDecision'] <= 100)]
+X2 = data2
+lda.fit(X, y_encoded)
+
+pred2 = lda.predict(X2)
+print("Predicted")
+print(pred2.tolist())
+print(labelEncoder.classes_)
  `
 }
