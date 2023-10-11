@@ -1,0 +1,32 @@
+<div class="project-container">
+    <app-text-section title="Segundo ataque al corazón" text="En este apartado se intentará predecir 
+    si es probable que se tenga un segundo ataque al corazón en base a ciertos datos de entrada.
+     Para poder predecir esto, se usará un Regresión Logística. 
+     Se comparará tanto resultados obtenidos en Python como la herramienta RapidMiner.">
+    </app-text-section>
+     <app-subtitle-text-section title="Datos del problema" text="Para dicho problema se proveen datasets en formato csv, 
+     un dataset de entrenamiento y otro de scoring, en este caso se cuentan con los siguientes datos: 
+     Edad, Estado_civil, Sexo, Categoria_Peso, Colesterol, Manejo_stress, Trat_ansiedad, 2do_Ataque_corazon (Variable objetivo)">
+    </app-subtitle-text-section>
+    <app-subtitle-text-section title="Desarrollo con python" text="Para comenzar, se desarrolló un script en Python 
+    el cual dado un conjunto de datos (entrenamiento) y el uso de librerias como Pandas, sklearn, matplotlib, 
+    para poder predecir de forma adecuada la variable objetivo en base a los datos mencionados anteriormente.">
+    </app-subtitle-text-section>
+    <app-text-section text="Se utiliza la librería Pandas para abrir y cargar un conjunto de datos que se encuentra en un archivo CSV, 
+    y luego se examina su estructura y contenido para comprender cómo está organizado y qué tipo de información contiene.">
+    </app-text-section>
+    <app-code-snipets code="{{ code1 }}"></app-code-snipets>
+    <app-text-section text="Posteriormente se obtiene a partir del dataset los datos y clases correspondientes, 
+    separando de la entrada X, de la variable objetivo Y."></app-text-section>
+    <app-code-snipets code="{{ code2 }}"></app-code-snipets>
+    <app-text-section text="Se divide el conjunto de datos en 2, uno para entrenamiento y otro para prueba. 
+    Además se crea y entrena un modelo de Regresión logística."></app-text-section>
+    <app-code-snipets code="{{ code3 }}"></app-code-snipets>
+    <app-text-section text="Se hacen predicciones sobre las categorías o clases a las que pertenecen los datos en el conjunto de prueba y 
+    luego se examinan los resultados obtenidos."></app-text-section>
+    <app-code-snipets code="{{ code4 }}"></app-code-snipets>
+    <app-text-section text="Se prueba el modelo y se visualiza su rendimiento y la matriz de confusión."></app-text-section>
+    <app-code-snipets code="{{ code5 }}"></app-code-snipets>
+    <app-text-section text="El resultado de este último fragmento de código es el siguiente:"></app-text-section>
+    <app-image-content imageRoute="../../assets/HeartCase/pyImg1.png"></app-image-content>
+
