@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class ProjectSquarePreviewComponent {
 @Input() title!: string;
 @Input() description!: string;
+@Input() imageRoute!: string;
 }
