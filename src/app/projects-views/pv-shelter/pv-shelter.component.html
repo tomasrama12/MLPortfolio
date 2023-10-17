@@ -1,0 +1,124 @@
+<div class="project-container">
+    <app-text-section title="Animal Shelter"></app-text-section>
+    <app-text-section title="Entendimiento de negocio" text="
+    En Estados Unidos, Austin, TX. Existe un refugio de animales del 
+    gobierno Americano el cual se destaca por ser uno con la mejor 
+    aplicación de la politica no-kill hacia los animales, por ende alberga 
+    anualmente muchos animales, al rededor de 18.000. Este refugio está sumamente 
+    involucrado tanto con la comunidad como con diferentes entidades con el fin de 
+    proteger a los animales. En este caso los datos proporcionados son de 2013.
+    ">
+    </app-text-section>
+    <app-text-section text="Se tratará de predecir si un animal será adoptado 
+    o no en base a los atributos de los datos proporcionados. 
+    Hay que destacar que no todos los animales que se van del refugio son adoptados 
+    sino que muchos otros son devueltos, transferidos, etc. 
+    Por ende esos tipos de devoluciones quedan descartados para este estudio."></app-text-section>
+    <app-text-section text="Los animales pueden llegar al refugio debido a diferentes causas"></app-text-section>
+    <app-text-section text="Ciudadanos que encuentran un perro perdido y lo entregan"></app-text-section>
+    <app-text-section text="Organizaciones protectoras de animales que los entregan"></app-text-section>
+    <app-text-section text="Abandonados por los dueños"></app-text-section>
+    <app-text-section text="Entregados por los dueños"></app-text-section>
+    <app-text-section text="Encontrados en la naturaleza"></app-text-section>
+    <app-text-section text="Entregados debido a situaciones complicadas como hospitalización de dueño, crueldad de animales, entre otros."></app-text-section>
+    <app-text-section text="La mayoría de los que llegan al refugio suelen irse adoptados o transferidos a otros centros, aunque tambien pueden ser devueltos al dueño si corresponde."></app-text-section>
+    <app-text-section text="La mayoría de animales que llegan al refugio, lo hacen con condiciones normales aunque 
+    otros pocos llegan heridos o enfermos. También la mayoría son perros perdidos que son entregados por ciudadanos.
+    Además gran mayoría de los animales que llegan al refugio son perros o gatos, pero sobre todo perros."></app-text-section>
+    <app-text-section title="Entendimiento de los datos"></app-text-section>
+    <app-text-section text="animal_id: Identificador del animal (Polinómico)"></app-text-section>
+    <app-text-section text="name: Nombre del animal (Polinómico)"></app-text-section>
+    <app-text-section text="datetime: Fecha y hora en la que el animal llegó al refugio (Polinómico)"></app-text-section>
+    <app-text-section text="monthyear: Mes y año en el que el animal llegó al refugio (Polinómico)"></app-text-section>
+    <app-text-section text="date_of_birth: Fecha de nacimiento del animal (Polinómico)"></app-text-section>
+    <app-text-section text="found_location (Polinómico)"></app-text-section>
+    <app-text-section text="intake_type: Tipo de entrada al refugio (Polinómico): Cuenta con los siguientes valores
+    Public Assist: Entregados debido a situaciones complicadas como hospitalización de dueño  crueldad de animales, entre otros --
+    Owner Surrender: Entrega por parte del dueño -- Stray: Entra por parte de ciudadanos -- Euthanasia Request: Entrega por petición de eutanasia --
+    Wildlife: Enctontrados en lugares de animales en condiciones de vida salvaje"></app-text-section>
+    <app-text-section text="intake_condition: Condición en la que llega el animal (Polinómico): Cuenta con los siguientes valores
+    Normal: Condición normal -- Injured: Herido -- Sick: Enfermo -- Aged: Viejo -- Feral: Salvaje -- 
+    Nursing: Amamantando -- Other: Otro -- Pregnant: Embarazada"></app-text-section>
+    <app-text-section text="outcome_type (Polinómico): Cuenta con los siguientes valores
+    Adoption: Adopción -- Transfer: Transferencia a otro centro -- Return to Owner: Devuelto al dueño -- Euthanasia: Eutanasia -- Died: Muerto -- Missing: perdido
+     -- Rto_Adopt: Adoptado por el dueño -- Disposal: Retirado"></app-text-section>
+    <app-text-section text="outcome_subtype (Polinómico): Cuenta con los siguientes valores
+    Partner: Transferido a otro centro -- Foster: Adoptado por alguien temporalmente -- SCRP: Transferido a otro centro -- 
+    Suffering: Eutanasia por sufrimiento -- Aggressive: Eutanasia por agresividad -- Offsite: Ubicación temporal fuera del refugio -- 
+    In Kennel: En jaula o zona -- Behavior: Comportamiento inadecuado -- Rabies Risk: Eutanasia por riesgo de rabia --
+    Medical: Eutanasia por razones médicas -- In Foster -- Enroute: En ruta -- 
+    At Vet: En el veterinario -- In Surgery: En cirugía -- Possible Theft: Posiblemente Robado -- 
+    Court/Investigation: Investigación o temas legales
+     "></app-text-section>
+    <app-text-section text="animal_type: Tipo de animal (Polinómico)
+    Dog: Perro -- 
+    Cat: Gato -- 
+    Other: Otro aniamal -- 
+    Bird: Pájaro -- 
+    Livestock: Ganado"></app-text-section>
+    <app-text-section text="sex_upon_outcome: Sexo al momento de salir del refugio (Polinómico)
+    Neutered Male: Macho castrado -- Spayed Female: Hembra castrada"></app-text-section>
+    <app-text-section text="sex_upon_intake (Polinómico)
+    Neutered Male: Macho castrado -- Spayed Female: Hembra castrada"></app-text-section>
+    <app-text-section text="age_upon_outcome: Edad al momento de salir del refugio (Polinómico)"></app-text-section>
+    <app-text-section text="breed: Raza (Polinómico)"></app-text-section>
+    <app-text-section text="color: Color (Polinómico)"></app-text-section>
+    <app-text-section title="Análisis y preparación de los datos" text="Se procede a primero, analizar que atributos se prestan para su descarte:
+    Primero, se requiere predecir al momento de la entrada si podrá 
+    ser adoptado o no, en este caso muchos datos del outcome pierden 
+    sentido ya que no se tendrían esos datos cuando se ingresa al animal. 
+    Por ende se descartan los datos relacionados al outcome excepto la label 
+    que es outcome_type, la cual se quiere predecir si terminará adoptado."></app-text-section>
+    <app-text-section text="También se observa como datetime y monthyear son datos duplicados por 
+    ende uno se descarta, en este caso, descartare monthyear."></app-text-section>
+    <app-image-content imageRoute="../../assets/shelter/rm1.png"></app-image-content>
+    <app-text-section text="Por otra parte eliminar animal_id es buena opción después de 
+    juntarlo con el otro dataset ya que no se utilizará y no aportará nada de valor al modelo."></app-text-section>
+    <app-text-section text="También cabe destacar que se descarta el nombre “name” del animal ya que no aporta valor a la predicción."></app-text-section>
+    <app-text-section title="Modelo"></app-text-section>
+    <app-image-content imageRoute="../../assets/shelter/rm2.png"></app-image-content>
+    <app-text-section text="Como primer paso se importan los dos dataset, 
+    el de intakes y outcomes para su posterior uso. De forma consiguiente, 
+    se les aplica un operador Join que efectivamente realiza un join sobre los datasets 
+    mediante el animal_id como clave, en este caso se optó por inner join para poder tener datos consistentes en el sentido de que 
+    si hay un perro que entro al refugio, tiene que estar en el dataset de salida, para así evitar futuros problemas."></app-text-section>
+    <app-text-section text="Posteriormente se remueven los atributos duplicados ya que los dataset tienen datos que al hacer el join se pueden duplicar."></app-text-section>
+    <app-text-section text="Después del anterior paso, se remueven ciertos atributos mencionados en la parte de Análisis y preparación de datos."></app-text-section>
+    <app-text-section text="Como siguiente paso, se mapea utilizando el operador Map, todos los valores de la variable 
+    objetivo a los valores que se necesitan, en este caso opté por cambiar todo valor que no era 
+    “adopted” por not adopted, ya que el objetivo de este caso de estudio es predecir la adopción de animales."></app-text-section>
+    <app-text-section text="Después se selecciona el atributo a predecir como label, el cual es el output_type."></app-text-section>
+    <app-text-section text="Posteriormente, se pasa el atributo datetime al formato Date, de forma que sea realmente reconocido como Date por el sistema 
+    y poder operar mejor con el mismo. 
+    Además se optó por excluir la hora ya que no agregaba 
+    valor significante y creaba más complejidad al modelo."></app-text-section>
+    <app-text-section text="Después de pasar datetime al formato Date, se remueven todos los datos 
+    duplicados para evitar complicaciones y obtener un mejor rendimiento utilizando el operador Remove Duplicates."></app-text-section>
+    <app-text-section text="Si bien la variable objetivo quedó como binomial, se agregó un operador para cambiar 
+    a binomial directamente desde nominal ya que en ocasiones podían ocurrir 
+    fallas si no estaba explicitamente declarado."></app-text-section>
+    <app-text-section text="Por último paso antes de realizar una selección hacia adelante, se descartaron los datos faltantes 
+    utilizando el operador Filter Examples."></app-text-section>
+    <app-text-section text="Posteriormente, se hace un Forward Selection utilizando su operador para poder lograr una mejor performance."></app-text-section>
+    <app-image-content imageRoute="../../assets/shelter/rm3.png"></app-image-content>
+    <app-text-section text="Dentro del operador Forward Selection se hace un Cross Validation 
+    para poder evitar contaminación entre los datos y lograr una separación adecuada entre datos de entrenamiento y de prueba."></app-text-section>
+    <app-image-content imageRoute="../../assets/shelter/rm4.png"></app-image-content>
+    <app-text-section text="Dentro del operador Cross Validation se aplica el algoritmo 
+    seleccionado (LR) en la parte de Training, mientras que en el apartado de Testing, 
+    se aplica el modelo y se evalúa su performance. En este caso no se decidió por normalizar 
+    los datos ya que la gran mayoría son nominales, por ende carece de sentido."></app-text-section>
+    <app-text-section title="Evaluación" text="Dada la evaluación de diferentes algoritmos como lo pueden ser k-NN, Naive Bayes, Logistic Regresion, 
+    puedo concluir que Logistic Regresion logró demostrar un mejor resultado con un accuracy / exactitud de 72.05% y una precisión de 62.67%."></app-text-section>
+    <app-text-section text="Analizando la matriz de confusión, se puede decir que a 1653 datos, 
+    se les hizo una predicción incorrecta ya que en vez de ser adoptados, se predijo que no fueron 
+    adoptados, por otra parte, se predijo que 821 animales fueron adoptados pero realmente no fueron 
+    adoptados. Por ende si bien son cantidades significativas, es de lo mejor que se pudo lograr."></app-text-section>
+    <app-image-content imageRoute="../../assets/shelter/rm5.png"></app-image-content>
+    <app-text-section title="Para mejorar" text="Se podría hacer que datetime solo tenga 12 opciones 
+    (los meses) para así llevar a un resultado más certero porque tener una rango de años con meses.
+    Por otra parte, también se podría cambiar la edad de los perros a un formato uniforme, 
+    ya que este contiene varias inconsistencias. Esto facilitaría al modelo a realizar mejores predicciones."></app-text-section>
+
+
+</div>

@@ -18,6 +18,8 @@ import { PvOneComponent } from './projects-views/pv-one/pv-one.component';
 import { SubtitleTextSectionComponent } from './subtitle-text-section/subtitle-text-section.component';
 import { ImageContentComponent } from './image-content/image-content.component';
 import { PvHeartComponent } from './projects-views/pv-heart/pv-heart.component';
+import { PvTitanicComponent } from './projects-views/pv-titanic/pv-titanic.component';
+import { PvShelterComponent } from './projects-views/pv-shelter/pv-shelter.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { PvHeartComponent } from './projects-views/pv-heart/pv-heart.component';
     PvOneComponent,
     SubtitleTextSectionComponent,
     ImageContentComponent,
-    PvHeartComponent
+    PvHeartComponent,
+    PvTitanicComponent,
+    PvShelterComponent
   ],
   imports: [
     BrowserModule,
