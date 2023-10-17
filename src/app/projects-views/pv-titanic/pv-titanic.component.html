@@ -1,0 +1,153 @@
+<div class="project-container">
+  <app-text-section title="Titanic"></app-text-section>
+  <app-text-section
+    title="Entendimiento de negocio"
+    text="El propósito
+  fundamental de este proyecto consiste en desarrollar un análisis predictivo
+  respecto a los datos de los pasajeros a bordo del histórico y emblemático
+  trasatlántico Titanic, con el objetivo de discernir con precisión la
+  probabilidad de supervivencia de cada individuo. La esencia de esta
+  investigación recae en la exploración de relaciones intrínsecas y la
+  evaluación de algoritmos y metodologías potenciales que contribuyan de manera
+  significativa a optimizar la calidad de estas predicciones."
+  ></app-text-section>
+  <app-text-section
+    title="Entendimiento de los datos"
+    text="En este apartado se
+  dará un listado de los atributos, identificando su tipo y rango o posible
+  valores. Esto con el fin de tener una buena vista sobre los datos trabajados
+  logrando así entender de mejor forma los mismos."
+  ></app-text-section>
+  <app-text-section
+    title="Atributos"
+    text="A continuación se presenta una lista de los atributos"
+  ></app-text-section>
+  <app-text-section
+    text="Passenger Class: Polinómico (First, Second, Third)"
+  ></app-text-section>
+  <app-text-section text="Name: Polinómico"></app-text-section>
+  <app-text-section text="Sex: Binomial: (Male, Female)"></app-text-section>
+  <app-text-section text="Age: Numérico Real (0.167 a 80)"></app-text-section>
+  <app-text-section
+    text="No of Siblings or Spouses on Board: Numérico Entero (0 a 8)"
+  ></app-text-section>
+  <app-text-section
+    text="No of Parents or Children on Board: Numérico Entero (0 a 9)"
+  ></app-text-section>
+  <app-text-section text="Ticket Number: Polinómico "></app-text-section>
+  <app-text-section text="Passenger Fare: Numérico"></app-text-section>
+  <app-text-section text="Cabin: Polinómico"></app-text-section>
+  <app-text-section
+    text="Port of Embarkation: Polinómico (Cherbourg, Queenstown, Southampton)"
+  ></app-text-section>
+  <app-text-section text="Life Boat: Polinómico"></app-text-section>
+  <app-text-section
+    text="Survived: Binomial (Yes, No) *Varable a predecir*"
+  ></app-text-section>
+  <app-text-section
+    title="Análisis de los datos"
+    text="En base a los datos mencionados, sin mucho análisis, 
+    se puede decir que para el objetivo de predecir si alguien 
+    sobrevive o no al Titanic, hay un par de atributos que no son de 
+    utilidad para esta predicción, y que quitarlos sería mejor para aumentar la eficiencia y rápidez."
+  ></app-text-section>
+  <app-text-section
+    text="En este caso, el atributo “Name” no tiene importancia al momento de la 
+    predicción excepto que se quiere predecir en base a tu nombre las chances que se 
+    tendría de sobrevivir al Titanic, lo cual no es el caso ya que en sí, el nombre no influye 
+    en estas chances de sobrevivir. Si bien se podrían relacionar ciertos apellidos que solo tendrían 
+    personas de clase alta y así vincular con la clase en la que viajan y en base a eso predecir las posibilidades 
+    de sobrevivir, no tiene sentido ya que para eso se usa el atributo “Passenger Class”."
+  ></app-text-section>
+  <app-text-section
+    text="Por otra parte, el atributo “Ticket Number”, sirve solo como identificador del ticket, lo cual no dice nada sobre si tendrá más 
+    o menos probabilidades de sobrevivir, ya que solo es un número el cual identifica un ticket."
+  ></app-text-section>
+  <app-text-section
+    text="Otro atributo que se presta para eliminar, es “Port of Embarkation” ya que no aporta valor a la predicción."
+  ></app-text-section>
+  <app-text-section
+    text="Por ende se eliminan esos tres atributos mencionados ya que no aportan valor significante al modelo."
+  ></app-text-section>
+  <app-text-section
+    text="Siguiendo con el proceso de identificar atributos 
+    los cuales no resultan significantes para el modelo, en base 
+    a los valores faltantes, el atributo “Cabin” tiene 1014 valores 
+    faltantes sobre un total de 1309, por ende, eliminarlo resulta 
+    buena opción ya que no afectaría significativamente el modelo."
+  ></app-text-section>
+  <app-text-section text="Por otra parte se analizaron combinaciones de atributos, 
+  las cuales podrían llegar a tener una correlación importante, por lo tanto, si están 
+  muy relacionados, eliminar uno de los atributos relacionados entre sí, no afectaría el 
+  modelo ya que en base al otro atributo se podría conseguir el mismo resultado."></app-text-section>
+  <app-subtitle-text-section title="Passenger Fare vs Passenger Class"></app-subtitle-text-section>
+  <app-image-content imageRoute="../../assets/titanic/rm1.png"></app-image-content>
+  <app-text-section text="Si bien hay una clara relación entre primera clase 
+  y precios altos, en cuanto a segunda clase y tercera, no existe una distinción 
+  que resulte fácil decir, que si un pasajero pagó una cantidad determinada, le 
+  corresponde X clase. Por ende si bien sin analizar parecería estar muy relacionado
+la clase con el precio, en base a mis observaciones, no está tan relacionado 
+como para eliminar alguno de los atributos."></app-text-section>
+<app-subtitle-text-section title="Observaciones" text="Las mujeres a mayor clase, mayor chance de sobrevivir. 
+A diferencia de los hombres que las chances incrementan pero no de forma tan distante."></app-subtitle-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm2.png"></app-image-content>
+<app-text-section text="Por otra parte también se puede ver como el sexo de la persona influye bastante en si 
+sobrevivió o no, ya que en la época del Titanic tenía mucha más 
+influencia la costumbre de “mujeres y niños primero”."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm3.png"></app-image-content>
+<app-text-section title="Preparación de los datos" text="En este apartado se detallará el proceso de preparación de los datos"></app-text-section>
+<app-subtitle-text-section title="Valores faltantes"></app-subtitle-text-section>
+<app-subtitle-text-section title="Age" text="En el caso del atributo “Age”, 
+existen 263 valores faltantes, por ende, es una suma importante sobre los más de 1300 datos. 
+Por ende para tratar de resolver estos valores, existen caminos diferentes, remplazarlos por 
+la media(promedio), por un valor elegido de forma arbitraria, por un valor aleatorio, por la moda, 
+por la mediana, entre otros, además de eliminar"></app-subtitle-text-section>
+<app-subtitle-text-section title="Life Boat" text="En este caso, se elimina el atributo ya que más de 800 
+entradas tienen valores faltantes. De otra forma afectaría las predicciones 
+dando una precisión no certera."></app-subtitle-text-section>
+<app-subtitle-text-section title="Normalización" text="En este caso al tener datos con valores numéricos con rango de valores 
+diferentes se puede normalizar esos datos para lograr tener un modelo más 
+eficiente. Por ende en este caso se le aplica una Z-transformation donde 
+la media es 0 y la varianza  es 1."></app-subtitle-text-section>
+<app-subtitle-text-section title="Outliers" text="Se eliminaron 3 entradas que tenían un passenger fare de 512.329, 
+lo cual estaba bastante alejado del resto de valores."></app-subtitle-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm4.png"></app-image-content>
+<app-text-section title="Modelo" text="En este apartado se detallará el modelo utilizado para la predicción.
+Primero se comienza con seleccionar el dataset que se utilizará 
+para después trabajar sobre el mismo, en este caso se usó el dataset 
+de Titanic el cual proviene de los ejemplos de RapidMiner."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm5.png"></app-image-content>
+<app-text-section text="Posteriormente se selecciona que atributos se van 
+a descartar debido al previo análisis mencionado en este documento, 
+en este caso se decidió por descartar (Cabin, Life Boat, Name, Port of Embarkation, 
+Ticket Number). Esto a la larga logra menos contaminación y más rapidez al momento de ejecutar el modelo."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm6.png"></app-image-content>
+<app-text-section text="En la siguiente imagen se muestra como se agrega un operador de Set Role para indicar la label, que es el atributo a predecir."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm7.png"></app-image-content>
+<app-text-section text="De forma posterior, se agrega el operador Replace Missing Values para remplazar todos los valores faltantes de aquellos atributos 
+que se le indiquen, en este caso como se mencionó anteriormente, 
+se decidió por colocar el average en cada valor faltante de age."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm8.png"></app-image-content>
+<app-text-section text="Se filtran los outliers indicados anteriormente en este documento, 
+para que el modelo no se vea afectado. Además se agrega el operador Forward Selection para 
+que en base a los atributos ya seleccionados, haga su propia selección para determinar cuales 
+son los que tienen mayor relevancia al momento de la predicción."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm9.png"></app-image-content>
+<app-image-content imageRoute="../../assets/titanic/rm10.png"></app-image-content>
+<app-text-section text="Dentro del operador Forward Selection, se hace un Cross Validation con el fin de evitar la 
+contaminación de los datos y hacer una buena selección de los mismos para entrenamiento y test del modelo."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm11.png"></app-image-content>
+<app-text-section text="Dentro del operador de Cross Validation, en la sección de Training, se normaliza la entrada y 
+posteriormente se le pasa al algoritmo de KNN."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm12.png"></app-image-content>
+<app-text-section text="En el apartado de Testing, se normaliza los datos que serán usados para Test y se aplica el modelo con los datos test, 
+y el modelo de la sección de Training. Posteriormente se calcula la performance del mismo."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm13.png"></app-image-content>
+<app-text-section title="Evaluación" text="Dado el modelo provisto en la sección anterior, se llegó 
+a una performance adecuada tanto su exactitud como precisión."></app-text-section>
+<app-image-content imageRoute="../../assets/titanic/rm14.png"></app-image-content>
+<app-text-section text="Cabe destacar que se probaron otros algoritmos que podrían haber sido de utilidad para este caso de estudio. 
+Estos fueron Regresión Logística con un resultado de 78.93% de exactitud y Naive Bayes con 78.85% de exactitud.
+Como conclusión, se llega a que resulta un buen modelo ya que es mucho mejor que hacerlo de forma aleatoria."></app-text-section>
+
+</div>

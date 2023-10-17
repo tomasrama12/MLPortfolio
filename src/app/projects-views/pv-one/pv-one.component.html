@@ -1,51 +1,36 @@
 <div class="project-container">
   <app-text-section
-    title="Sports prediction LDA"
-    text="Predicting athletic performance is an exciting 
-    challenge that combines data science and sports analytics 
-    to identify talented athletes in a specific sport. In this 
-    project, we will use a dataset containing detailed information 
-    about individuals participating in various sports, including rugby, 
-    fútbol, volleyball, and basketball. Our main task is to predict the most suitable 
-    primary sport for each individual based on a set of physical and mental attributes."
+    title="Deportes LDA"
+    text="La predicción del rendimiento deportivo es un reto apasionante que combina la ciencia de datos y la analítica deportiva para identificar a los atletas con talento en un deporte concreto. En este proyecto, utilizaremos un conjunto de datos que contiene información detallada sobre individuos que participan en varios deportes, como rugby, fútbol, voleibol y baloncesto. Nuestra tarea principal es predecir el deporte principal más adecuado para cada individuo basándonos en un conjunto de atributos físicos y mentales."
   ></app-text-section>
   <app-text-section
-    text="The dataset comprises various columns capturing key characteristics of athletes, 
-    such as age(edad), strength(fuerza), speed(velocidad), injury history(historial de lesiones), vision(visión), endurance(resistencia), 
-    agility(agilidad), and decision-making ability(capaciad de toma de decisiones). 
-    The target variable of our analysis is PrimarySport (DeportePrimario), indicating the sport an individual is inclined to excel in."
+    text="El conjunto de datos consta de varias columnas que recogen características clave de los deportistas, como la edad, la fuerza, la velocidad, el historial de lesiones, la visión, la resistencia, la agilidad y la capacidad de toma de decisiones. La variable objetivo de nuestro análisis es DeportePrimario, que indica el deporte en el que un individuo tiende a destacar."
   ></app-text-section>
   <app-text-section
-    text="We will leverage powerful tools like Python and RapidMiner to carry out this analysis. 
-    Python will enable us to perform data preprocessing, build machine learning models, and evaluate 
-    their performance, while RapidMiner will assist us in conducting more in-depth and efficient exploratory data analysis."
+    text="para llevar a cabo este análisis. Python nos permitirá realizar el preprocesamiento de datos, crear modelos de aprendizaje automático y evaluar su rendimiento, mientras que RapidMiner nos ayudará a realizar análisis exploratorios de datos más exhaustivos y eficientes. Además de evaluar su rendimiento, mientras que RapidMiner nos ayudará a realizar análisis exploratorios de datos más exhaustivos y eficientes."
   ></app-text-section>
   <app-text-section
-    text="Throughout this project, we will explore machine learning and data mining techniques 
-    to develop an accurate model that allows us to determine the most suitable primary sport for
-     each individual based on their personal characteristics. This type of analysis not only has 
-     applications in the sports domain but also in talent identification and decision-making in 
-     various fields where individual skills are critical to success."
+    text="A lo largo de este proyecto, exploraremos técnicas de aprendizaje automático y minería de datos para desarrollar un modelo preciso que nos permita determinar el deporte principal más adecuado para cada individuo en función de sus características personales. Este tipo de análisis no solo tiene aplicaciones en el ámbito deportivo, sino también en la identificación de talentos y la toma de decisiones en diversos campos en los que las habilidades individuales son fundamentales para el éxito."
   ></app-text-section>
   <app-text-section
-    title="Code"
-    text="The code used in this project is shown below"
+    title="Código"
+    text="A continuación se muestra el código utilizado en este proyecto"
   ></app-text-section>
   <app-code-snipets code="{{ code }}"></app-code-snipets>
   <app-text-section
-    title="Training"
-    text="This shows how the model works in RM and Python3"
+    title="Entrenamiento"
+    text="Esto muestra cómo funciona el modelo en RM y Python3"
   ></app-text-section>
   <app-text-section
-    text="The first step is to retrive the dataset. As you may see in the image below, after retrieving
-  I decided to filter the examples to work with a cleaner dataset. After filtering, a cross validation is performed"
+    text="El primer paso es recuperar el conjunto de datos. Como se puede ver en la imagen siguiente, tras la recuperación decidí filtrar los ejemplos para trabajar con un conjunto de datos más limpio. Tras el filtrado, se realiza una validación cruzada"
   ></app-text-section>
   <app-image-content
     imageRoute="../../assets/pdtest/pdt6.png"
   ></app-image-content>
   <app-text-section
-    text="The content of the cross validation has a known supervised algorithm, Linear Discriminant Analysis.
-  After training data with that algorithm, the model was applied to check the results and its performance"
+    text="El contenido de la validación cruzada tiene un algoritmo supervisado conocido, 
+    el Análisis Discriminante Lineal. Tras entrenar los datos 
+    con ese algoritmo, se aplicó el modelo para comprobar los resultados y su rendimiento"
   ></app-text-section>
   <app-image-content
     imageRoute="../../assets/pdtest/pdt5.png"
@@ -54,25 +39,20 @@
     imageRoute="../../assets/pdtest/pdt7.png"
   ></app-image-content>
   <app-text-section
-    text="The columns are similar to when using RM to evaluate a model, 
-  which shows values seen here such as accuracy, 
-  recall, among others."
+    text="Las columnas son similares a cuando se utiliza RM para evaluar un modelo, que muestra valores vistos aquí como precisión, recall, entre otros."
   ></app-text-section>
   <app-image-content
     imageRoute="../../assets/pdtest/pdt8.png"
   ></app-image-content>
   <app-text-section
     title="Scoring"
-    text="This shows how the model works in RM and Python3 using scoring dataset"
+    text="Esto muestra cómo funciona el modelo en RM y Python3 utilizando el conjunto de datos de puntuación"
   ></app-text-section>
   <app-image-content
     imageRoute="../../assets/pdtest/pdt9.png"
   ></app-image-content>
   <app-text-section
-    text="Using the scoring dataset, it can be seen at a 
-    glance that the values shown in the Python program are 
-    related to those of RM, taking into account the different 
-    categories mapped to numbers according to their index."
+    text="Utilizando el conjunto de datos de puntuación, se puede observar a simple vista que los valores mostrados en el programa Python están relacionados con los de RM, teniendo en cuenta las diferentes categorías asignadas a números según su índice."
   ></app-text-section>
   <app-image-content
     imageRoute="../../assets/pdtest/pdt10.png"
