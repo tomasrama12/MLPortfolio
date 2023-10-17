@@ -20,6 +20,8 @@ import { ImageContentComponent } from './image-content/image-content.component';
 import { PvHeartComponent } from './projects-views/pv-heart/pv-heart.component';
 import { PvTitanicComponent } from './projects-views/pv-titanic/pv-titanic.component';
 import { PvShelterComponent } from './projects-views/pv-shelter/pv-shelter.component';
+import { PvCkdComponent } from './projects-views/pv-ckd/pv-ckd.component';
+import { SourceLinkComponent } from './source-link/source-link.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { PvShelterComponent } from './projects-views/pv-shelter/pv-shelter.compo
     ImageContentComponent,
     PvHeartComponent,
     PvTitanicComponent,
-    PvShelterComponent
+    PvShelterComponent,
+    PvCkdComponent,
+    SourceLinkComponent
   ],
   imports: [
     BrowserModule,
