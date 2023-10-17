@@ -1,0 +1,11 @@
+.project-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

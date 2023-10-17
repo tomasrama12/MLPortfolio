@@ -1,0 +1,205 @@
+<div class="project-container">
+    <app-text-section title="CKD"></app-text-section>
+    <app-text-section title="Entendimiento de negocio" text="La enfermedad renal crónica (ERC), o chronic kidney 
+    disease (CKD) en inglés, esta afecta a muchas personas en el mundo ya que sus causas son varias. 
+    Esta enfermedad puede generar que se necesiten tratamientos caros o trasplantes, por ende resulta 
+    importante intentar prevenirlo ya que si se previene, 
+    se puede evitar gastar mucho dinero en tratamientos, mejorar la calidad de vida y evitar problemas. "></app-text-section>
+    <app-text-section text="Si bien la enfermedad no discrimina, en otras palabras, 
+    le puede pasar a cualquiera, existe cierta tendencia a que cierta población contraiga 
+    la misma, por ende el objetivo y propósito de este caso de estudio 
+    es analizar y predecir si en base a ciertos datos de test de sangre y orina, 
+    la persona puede llegar a tener CKD."></app-text-section>
+    <app-text-section text="Como se puede observar en la siguiente imagen, 
+    cada 100,000 personas, cierta cantidad de personas por país suele tener ese problema. 
+    Como se pude ver es de preocupación ya que hay países donde más del 10% de la población tiene CKD."></app-text-section>
+    <app-text-section text="Generalmente personas con mala alimentación, anemia se suele 
+    ver más afectada. Esto es vinculante al estatus social de la persona ya 
+    que generalmente las personas con menos poder adquisitivo tienen peor alimentación."></app-text-section>
+    <app-text-section text="Por otra parte, la edad también afecta esto 
+    debido a que está vinculado con 
+    las probabilidades de tener anemia, cuanto más mayor es la persona, 
+    más probabilidades de tener anemia y por ende más de tener CKD."></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm1.png"></app-image-content>
+    <app-text-section text="Durante este documento se tratará de investigar y 
+    probar diferentes algoritmos de machine learning para ver como pueden analizar 
+    datos médicos, como análisis de sangre y orina, para identificar signos tempranos de CKD. 
+    Esto es especialmente útil en áreas con recursos médicos 
+    limitados, donde la detección temprana puede ayudar a ralentizar la progresión de la enfermedad."></app-text-section>
+    <app-text-section text="La mencionada puede causar problemas a nivel 
+    económicos tanto de la persona como de las instituciones ya que si se está 
+    en una etapa avanzada se requieren ciertos métodos que resultan caros. Por otra parte 
+    esto puede generar que las personas que lo tienen, falten más al trabajo o 
+    rindan menos debido a molestias u problemas derivados. Por ende, económica y social-mente no es lo mejor."></app-text-section>
+    <app-text-section text="El uso de machine learning en la prevención 
+    y el manejo de la enfermedad renal crónica es una herramienta valiosa 
+    que puede marcar la diferencia en la vida de las personas, especialmente 
+    en regiones con bajos ingresos, donde esta enfermedad representa un desafío 
+    importante para la salud pública. La combinación de tecnología, educación y 
+    atención médica puede contribuir a reducir la carga de la CKD en estas poblaciones 
+    y mejorar la calidad de vida de quienes la padecen."></app-text-section>
+    <app-text-section title="Entendimiento de los datos y su preparación" text="Para comenzar, y con el fin de 
+    poder realizar un análisis más preciso y eficiente, se tomó la decisión de buscar atributos con alto nivel 
+    de correlación con otros, con el fin de decidir de eliminarlos para poder tener un modelo con una mejor performance, 
+    ya que tener atributos que para el modelo pueden hacer referencia a lo mismo, no es útil."></app-text-section>
+    <app-text-section text="Por otra parte el hecho de deshacerse de atributos 
+    de esta forma también a futuro para cuando se trabaje sobre el modelo, brindará mayor simpleza 
+    tanto al momento de corregir valores faltantes, como también en su interpretación."></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm2.png"></app-image-content>
+    <app-subtitle-text-section title="hemo vs pcv" text="Se puede observar como la hemoglobina 
+    (hemo) y el “pcv” están muy correlacionadas, por ende para lograr un mejor modelo lo ideal 
+    es descartar una de las dos. La dificultad de esta decisión radica en que al no ser experto 
+    en el área, la decisión será basada en conocimiento bastante acotado. Por lo que como recomendación 
+    personal, diría que si se quisiera estar seguro, se debería consultar con un profesional. La relación 
+    entre el “pcv” y la hemoglobina es que ambos son indicadores de la cantidad de glóbulos rojos en la sangre 
+    y, por lo tanto, pueden estar relacionados. En este caso decido descartar “pcv” ya 
+    que la hemoglobina según lo investigado puede llegar a tener más usos y resulta normalmente más fácil de entender."></app-subtitle-text-section>
+    <app-subtitle-text-section title="hemo vs rbcc" text="
+    La decisión de mantener el atributo 'hemo' en lugar de 'rbc' 
+    se basa en el hecho de que 'hemo' ofrece una medida más inmediata 
+    y generalmente aceptada de la salud sanguínea, vinculada al transporte 
+    de oxígeno entre otros aspectos. Además, 'hemo' se relaciona directamente 
+    con la anemia, una condición común en pacientes con enfermedad renal crónica 
+    o abreviada como CKD. En contraste, 'rbc' proporciona información sobre la 
+    cantidad de glóbulos rojos en la sangre, pero 'hemo' es un indicador más directo
+    de la eficiencia de estos glóbulos para llevar oxígeno, lo cual es importante en el contexto de la CKD.
+    "></app-subtitle-text-section>
+    <app-subtitle-text-section title="hemo vs ane" text="
+    En este caso al estar directamente relacionado la hemoglobina con la anemia como se mencionaba en el apartado anterior, 
+    ya que si se tiene anemia lo más seguro es que tengas un nivel de hemoglobina bajo. Ya que la anemia es eso, nivel bajo de hemoglobina.
+    "></app-subtitle-text-section>
+    <app-subtitle-text-section title="bgr vs su" text="
+    La elección de eliminar la variable 'su' (azúcar en la orina) en lugar 
+    de 'bgr' (glucosa en sangre aleatoria) se basa en la mayor relevancia y 
+    especificidad clínica de 'bgr'. La medición de glucosa en sangre suele 
+    ser más directo y ampliamente aceptado en el contexto de la diabetes y 
+    la enfermedad renal crónica (CKD). Los niveles de glucosa en sangre se 
+    relacionan con la diabetes, que a menudo está relacionada con la CKD 
+    según diversas fuentes consultadas para la elaboración de este documento. 
+    En comparación, la medición de azúcar en la orina puede no ser tan específica ni directa en la 
+    evaluación de los niveles de glucosa en sangre y, por lo tanto, podría tener una 
+    importancia relativamente menor en la predicción de la CKD.
+    "></app-subtitle-text-section>
+    <app-subtitle-text-section title="hemo vs sg" text="
+    Con el fin descartar atributos ya que resultan muy correlacionados con hemo, se decide descartar sg ya que la correlación es alta. 
+    En este caso no hay una justificación teórica detrás ya 
+    que resulta complejo decidir entre estos debido a la falta del conocimiento específico.
+    "></app-subtitle-text-section>
+    <app-subtitle-text-section title="hemo vs al" text="
+    Con el fin descartar atributos ya que resultan muy correlacionados con hemo, se decide descartar al ya que la correlación es alta. En este caso no 
+    hay una justificación teórica detrás ya que resulta complejo decidir entre estos debido a la falta del conocimiento específico.
+    "></app-subtitle-text-section>
+    <app-subtitle-text-section title="sod vs sg" text="
+    En este caso se decidió por mantener 'sc' que es creatinina sérica y descartar 'sod' sodio en snagre.
+    "></app-subtitle-text-section>
+    <app-text-section text="
+    La elección se basa en que la creatinina sérica es un indicador más directo 
+    y ampliamente reconocido de la función renal. Los niveles elevados de creatinina 
+    en la sangre suelen indicar problemas renales, y la 'sc' es un componente esencial 
+    en la evaluación de la función renal.
+    "></app-text-section>
+    <app-text-section text="
+    Por otro lado, el sodio en sangre 'sod' está relacionado 
+    con el equilibrio de electrolitos y la presión arterial pero 
+    no tiene una relación tan directa con la función renal como la 
+    creatinina sérica. En el contexto de la CKD, la prioridad es evaluar 
+    la función renal y detectar problemas renales de manera temprana, 
+    lo que resalta la relevancia de 'sc.'
+    "></app-text-section>
+    <app-subtitle-text-section title="Análisis de valores faltantes" text="
+    En este caso la gran mayoría de los atributos pertenecientes 
+    al dataset cuentan con valores faltantes, por ende 
+    hay que analizar cada atributo para saber que hacer con esos valores que faltan.
+    "></app-subtitle-text-section>
+    <app-text-section text="
+    Se decidió por intentar de mantener los datos de la forma más normal posible, 
+    en el sentido de que se suplante los valores faltantes por la media, ya que al 
+    tener en la mayoría de atributos como mucho un 10% de valores faltantes, 
+    optar por colocar la media, no afectaría mucho los resultados ya que dentro de 
+    todo, un 10% más con valores promedios, es algo esperado.
+    "></app-text-section>
+    <app-subtitle-text-section title="Normalización" text="
+    El uso de diagramas de cajas, puede brindar de forma sencilla una manera de 
+    interpretar si existen atributos los cuales tienen valores 
+    (numéricos en este caso) en desproporción con otros atributos.
+    "></app-subtitle-text-section>
+    <app-text-section text="
+    El uso de diagramas de cajas, puede brindar de forma 
+    sencilla una manera de interpretar si existen atributos 
+    los cuales tienen valores (numéricos en este caso) en desproporción con otros atributos.
+    "></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm3.png"></app-image-content>
+    <app-text-section text="
+    Haciendo un análisis más detallado, se observa como en el 
+    resto de atributos también existe una desproporción entre el rango de valores que manejan. Por ende 
+    se puede concluir que se necesita de alguna forma una normalización para que todos se encuentren dentro de un rango que favorezca al modelo.
+    "></app-text-section>
+    <app-text-section text="En este caso se optó por realizar una normalización haciendo 
+    una “z-transformation” la cual consigue una media de 0 y una varianza de 1."></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm4.png"></app-image-content>
+    <app-subtitle-text-section title="Análisis de Outliers" text="
+    En esta sección se realizará un 
+    análisis sobre los outliers encontrados, 
+    con el fin de eliminarlos para que no afecten al modelo en sus predicciones.
+    "></app-subtitle-text-section>
+    <app-text-section text="
+    sc: En este caso, se decidió por descartar aquellos valores que estén por encima 
+    de 40 ya que según mi apreciación, si es menor, como 20 o 30, todavía puede 
+    considerarse como un dato normal y 
+    no tiene por que ser un outlier, en cambio 
+    con los mayores a 40, se denota una clara diferencia en distancias.
+    "></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm5.png"></app-image-content>
+    <app-text-section text="
+    bp: En el caso de bp, se denota una cierta distancia entre valores que se 
+    encuentran sobre 170 o superiores, por ende se 
+    decidió por descartar aquellos mayores a 140, debido a la interpretación del gráfico.
+    "></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm6.png"></app-image-content>
+    <app-text-section text="bgr: En este caso a diferencia de los otros valores analizados 
+    en esta sección, se quiere descartar un aquellos que su bgr sea menor a 50 ya que, 
+    el grueso de los valores del atributo sen encuentra entre rangos mayores a 60 / 70."></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm7.png"></app-image-content>
+    <app-text-section text="Se excluyen aquellas entradas que en estos atributos están dentro del rango seleccionado."></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm8.png"></app-image-content>
+    <app-text-section title="Modelado" text="
+    Para comenzar, primero se obtuvieron los datos mediante un csv. De forma consiguiente, se descartaron los atributos que resultaban muy 
+    correlacionados, utilizando el operador Select Attributes, debido a lo explicado en secciones de este documento donde se trata del tema. 
+    "></app-text-section>
+    <app-text-section text="Posterior a esto último, se remplazaron los valores faltantes 
+    de todos los atributos por su media utilizando el operador Replace Missing Values, 
+    lo cual está explicado en el aparatado de Análisis de valores faltantes."></app-text-section>
+    <app-text-section text="Como paso siguiente, se eliminan los datos considerados como outliers 
+    a través del uso del operador Filter Examples, ya que en este se le agregan reglas para poder filtrar datos."></app-text-section>
+    <app-text-section text="Además, como último paso antes de hacer un Forward Selection, 
+    se le asigna el rol “label” a la clase “class”, a través del operador Set Role."></app-text-section>
+    <app-text-section text="Como último paso de esta imagen, se hace uso del operador Forward Selection el cual realiza la 
+    operación que indica su nombre. Esto con el fin de optimizar el algoritmo y dar mejores resultados."></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm9.png"></app-image-content>
+    <app-text-section text="Se hace uso de la técnica de Cross Validation, la cual se utiliza para poder realizar una división 
+    entre datos de entrenamiento y datos de test, sin contaminación entre ellos y de forma proporcionada."></app-text-section>
+    <app-image-content imageRoute="../../assets/ckd/rm10.png"></app-image-content>
+    <app-text-section text="Dentro, del operador Cross Validation hay una separación entre Training y 
+    Testing. En la parte de Training se normalizan los datos y se aplica el algoritmo Naive Bayes que 
+    fue el que resultó más eficiente. Por otra parte en la sección de Testing, se aplica el preprocesamiento 
+    con la normalización de la parte de training para la entrada de los datos con el fin de que el resultado 
+    sea correcto, posteriormente se aplica el modelo y se evalúa su performance.">
+</app-text-section>
+<app-image-content imageRoute="../../assets/ckd/rm11.png"></app-image-content>
+<app-text-section title="Evaluación" text="En esta sección se analizarán los datos obtenidos. 
+Primero se observa el resultado de la Forward Selection, 
+donde elige ciertos atributos los cuales considera más importantes para 
+el rendimiento de las predicciones."></app-text-section>
+<app-image-content imageRoute="../../assets/ckd/rm12.png"></app-image-content>
+<app-text-section text="Como resultado de la performance de este modelo se observa que con el 
+algoritmo Naive Bayes se obtiene una “accuracy” o exactitud de 96.22% lo cual es bastante alto. Y en base a pruebas con otros 
+algoritmos como Regresión Logística o k-NN obtiene el mejor de los resultados tanto en exactitud como en precisión."></app-text-section>
+<app-image-content imageRoute="../../assets/ckd/rm13.png"></app-image-content>
+<app-text-section text="La matriz de confusión en este caso indica que hay 237 datos 
+que su predicción fue correcta para ckd y 6 incorrectos. Esto quiere decir que agregó seis ckd donde en 
+realidad correspondía notckd. Lo cual a mi parecer es bastante aceptable ya que es una predicción preventiva."></app-text-section>
+<app-text-section text="Por otra parte se predijeron 9 datos con notckd donde en realidad 
+correspondía ckd. Si bien lo mejor sería que esto sea 0 en este caso ya que siempre se intenta 
+predecir si es probable que tenga ckd, tampoco resulta tan preocupante porque sigue siendo bastante certero."></app-text-section>
+
+</div>

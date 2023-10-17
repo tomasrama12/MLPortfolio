@@ -6,6 +6,7 @@ import { PvOneComponent } from './projects-views/pv-one/pv-one.component';
 import { PvHeartComponent } from './projects-views/pv-heart/pv-heart.component';
 import { PvTitanicComponent } from './projects-views/pv-titanic/pv-titanic.component';
 import { PvShelterComponent } from './projects-views/pv-shelter/pv-shelter.component';
+import { PvCkdComponent } from './projects-views/pv-ckd/pv-ckd.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/landing-page', pathMatch: "full"},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'project-one', component: PvOneComponent},
   {path: 'project-two', component: PvHeartComponent},
   {path: 'project-three', component: PvTitanicComponent},
-  {path: 'project-four', component: PvShelterComponent}
+  {path: 'project-four', component: PvShelterComponent},
+  {path: 'project-five', component: PvCkdComponent},
 ];
 
 @NgModule({
