@@ -34,7 +34,8 @@
     justify-content: center;
     object-fit: cover;
     overflow: hidden;
-    border: 1px solid #0085FF;
+    border: 2px solid #0085FF;
+    border-radius: 20px;
 }
 
 img{
@@ -77,4 +78,10 @@ desc{
 .preview-container:hover{
     cursor: pointer;
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 1230px) {
+    .preview-container:hover{
+        transform: none;
+    }
 }

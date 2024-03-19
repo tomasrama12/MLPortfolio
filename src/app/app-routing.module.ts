@@ -7,13 +7,14 @@ import { PvHeartComponent } from './projects-views/pv-heart/pv-heart.component';
 import { PvTitanicComponent } from './projects-views/pv-titanic/pv-titanic.component';
 import { PvShelterComponent } from './projects-views/pv-shelter/pv-shelter.component';
 import { PvCkdComponent } from './projects-views/pv-ckd/pv-ckd.component';
+import { PvChatfactsComponent } from './projects-views/pv-chatfacts/pv-chatfacts.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/landing-page', pathMatch: "full"},
   {path:'landing-page', component: LandingPageComponent},
   {path:'other-info', component: InfoPageComponent},
-  {path:'project-one', component: PvOneComponent},
-  {path: 'project-two', component: PvHeartComponent},
+  {path:'project-one', component: PvChatfactsComponent},
+  {path: 'project-two', component: PvChatfactsComponent},
   {path: 'project-three', component: PvTitanicComponent},
   {path: 'project-four', component: PvShelterComponent},
   {path: 'project-five', component: PvCkdComponent},

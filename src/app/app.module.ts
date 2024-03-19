@@ -22,6 +22,8 @@ import { PvTitanicComponent } from './projects-views/pv-titanic/pv-titanic.compo
 import { PvShelterComponent } from './projects-views/pv-shelter/pv-shelter.component';
 import { PvCkdComponent } from './projects-views/pv-ckd/pv-ckd.component';
 import { SourceLinkComponent } from './source-link/source-link.component';
+import { PvChatfactsComponent } from './projects-views/pv-chatfacts/pv-chatfacts.component';
+import { TagComponent } from './tag/tag.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { SourceLinkComponent } from './source-link/source-link.component';
     PvTitanicComponent,
     PvShelterComponent,
     PvCkdComponent,
-    SourceLinkComponent
+    SourceLinkComponent,
+    PvChatfactsComponent,
+    TagComponent
   ],
   imports: [
     BrowserModule,
